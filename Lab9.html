@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <title>My first script</title> 
+<script src="intro.js"></script> 
+
+</head>
+
+<body> 
+    <noscript> 
+    <h2>This page requires JavaScript.</h2> 
+    </noscript> 
+    <h1> 
+        <script> 
+            window.onload = initAll; 
+function initAll() { 
+var ans = prompt("Are you sure you want to do that?",""); 
+var ans = prompt("Enter a positive number",""); 
+try { 
+if (!ans || isNaN(ans) || ans<0) { 
+throw new Error("Not a valid number"); 
+} 
+var sqrt = Math.sqrt(ans); 
+var message = "The square root of " + ans + " is " + sqrt; 
+alert(message); 
+document.write(message); 
+} 
+catch (errMsg) { 
+alert(errMsg.message); 
+} 
+
+if (ans) { 
+    alert("You said " + ans); 
+document.write("You said " + ans); 
+} 
+else { 
+    alert("You refused to answer"); 
+    }
+}
+
+            </script> 
+            
+    </h1> 
+    </body> 
+    </html> 

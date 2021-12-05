@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <title>My first script</title> 
+<script>
+    
+window.onload = initAll; 
+// global used numbers array 
+var usedNums = new Array(76);
+function setSquare(thisSquare) { 
+var currSquare = "square" + thisSquare; 
+var colPlace = new 
+Array(0,0,0,0,0,1,1,1,1,1,2,2,2,2,3,3,3,3,3,4,4,4,4,4);
+var colBasis = colPlace[thisSquare] * 15; 
+var newNum; 
+// loop until an unused number is found 
+do { 
+newNum = colBasis + getNewNum(); 
+} 
+while ( usedNums[newNum] ); 
+// mark number used 
+usedNums[newNum] = true;
+function anotherCard() { 
+// clear used numbers 
+for (var i = 1; i < usedNums.length; i++) { 
+usedNums[i] = false; 
+} 
+newCard(); 
+return false; 
+} 
+</script>
+</head>
+
+<body> 
+<script></script>    
+    <tr> 
+                <th>B</th> 
+                <th>I</th> 
+                <th>N</th> 
+                <th>G</th> 
+                <th>O</th> 
+            </tr> 
+            <tr> 
+                <td id="square0">&nbsp;</td> 
+                <td id="square5">&nbsp;</td> 
+                <td id="square10">&nbsp;</td> 
+                <td id="square14">&nbsp;</td> 
+                <td id="square19">&nbsp;</td> 
+            </tr> 
+            
+    
+    </body> 
+    </html> 
